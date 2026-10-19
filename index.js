@@ -1,4 +1,10 @@
-const { createElement } = require("react");
+/*
+* Purpose: Manipulating elements within an HTML block
+* Owner: Brian Karimi
+* Course: SDPT016
+* Date: 19th October, 2026
+* Last Modification: 14:25 hrs
+*/
 const bookStore = {
     name: 'Flatbooks Technical Books',
     books: [
@@ -44,7 +50,6 @@ const bookStore = {
     ]
 }
 
-// Write your code here!
 const bookStoreTitle = document.querySelector('#header');
 bookStoreTitle.textContent = bookStore.name;
 
@@ -53,6 +58,8 @@ const bookList = document.querySelector('#book-list');
 const _book = document.querySelector('#delete-this');
 bookList.removeChild(_book); 
 
+// Iterate through the list of books and append them to the
+// list-item container obtained
 for(let book of bookStore.books){
     const bookContainer = document.createElement('li');
     const bookTitle = document.createElement('h3');
